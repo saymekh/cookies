@@ -9,8 +9,6 @@ const checkboxFour = document.querySelector('.custom-check-four');
 const saveButton = document.querySelector('.save-preference-button');
 const dialogOne = document.querySelector('.custom-dialog-one');
 const dialogTwo = document.querySelector('.custom-dialog-two');
-const saveBtn = document.querySelector('.save-preferences');
-
 
 if (navigator.cookieEnabled && document.cookie) {
   console.log('Cookies are enabled and cookies are stored');
@@ -170,7 +168,6 @@ saveButton.addEventListener('click', () => {
   console.log(`Screen height: ` + getCookie('screenHeight'));
   dialogTwo.close();
 });
-
 
 dialogOne.addEventListener('click', function (e) {
   const rect = this.getBoundingClientRect();
