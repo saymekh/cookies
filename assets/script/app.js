@@ -1,6 +1,5 @@
 'use strict';
 
-
 const acceptButton = document.querySelector('.accept-button');
 const settingsButton = document.querySelector('.settings-button');
 const checkboxOne = document.querySelector('.custom-check-one');
@@ -66,7 +65,6 @@ function getBrowserName() {
 
   return browserName;
 }
-
 
 function getOSName() {
   const userAgent = navigator.userAgent;
@@ -150,16 +148,20 @@ saveBtn.addEventListener('click', () => {
   const date = new Date();
   date.setSeconds(date.getSeconds() + 15);
 
-  if (!checkOne.checked && !checkTwo.checked && !checkThree.checked && !checkFour.checked) {
+  if (!checkboxOne.checked && !checkboxTwo.checked && !checkboxThree.checked && !checkboxFour.checked) {
     setCookie('Browser', null, { 'expires': date });
     setCookie('operatingSystem', null, { 'expires': date });
     setCookie('screenWidth', null, { 'expires': date });
     setCookie('screenHeight', null, { 'expires': date });
   } else {
-    if (checkOne.checked) { setCookie('Browser', browser, { 'expires': date }); }
-    if (checkTwo.checked) { setCookie('operatingSystem', system, { 'expires': date }); }
-    if (checkThree.checked) { setCookie('screenWidth', screenWidth, { 'expires': date }); }
-    if (checkFour.checked) { setCookie('screenHeight', screenHeight, { 'expires': date }); }
+    if (checkboxOne.checked) 
+    { setCookie('Browser', browser, { 'expires': date }); }
+    if (checkboxTwo.checked) 
+    { setCookie('operatingSystem', system, { 'expires': date }); }
+    if (checkboxThree.checked) 
+    { setCookie('screenWidth', screenWidth, { 'expires': date }); }
+    if (checkboxFour.checked) 
+    { setCookie('screenHeight', screenHeight, { 'expires': date }); }
   }
 
   console.log(`Browser: ` + getCookie('Browser'));
@@ -186,4 +188,3 @@ dialogTwo.addEventListener('click', function (e) {
     dialogTwo.close();
   }
 });
-
