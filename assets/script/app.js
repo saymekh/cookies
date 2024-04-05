@@ -144,7 +144,7 @@ settingsButton.addEventListener('click', () => {
   dialogTwo.showModal();
 });
 
-saveBtn.addEventListener('click', () => {
+saveButton.addEventListener('click', () => {
   const date = new Date();
   date.setSeconds(date.getSeconds() + 15);
 
@@ -170,6 +170,7 @@ saveBtn.addEventListener('click', () => {
   console.log(`Screen height: ` + getCookie('screenHeight'));
   dialogTwo.close();
 });
+
 
 dialogOne.addEventListener('click', function (e) {
   const rect = this.getBoundingClientRect();
